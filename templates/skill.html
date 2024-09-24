@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Skill
+{% endblock %}
+
+
+{% block main %}
+<section>
+    <div class="common-landing">
+        <div class="common-info">
+            <p>SKILL</p>
+            <p>I excel in both <b>frontend</b> and <b>backend</b> development, enabling proficiency in <b>full-stack</b> capabilities.</p>
+            <p><a href="">Skills<span class="material-symbols-outlined">
+                arrow_downward
+                </span></a></p>
+        </div>
+        <div class="common-img">
+            {% load static %}
+            <img src="{% static 'img/skill.jpg' %}" alt="">
+        </div>
+    </div>
+
+    <!-- <div class="style-1"></div> -->
+</section>
+{% endblock %}
+
+    

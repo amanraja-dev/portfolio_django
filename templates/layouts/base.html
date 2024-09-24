@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/education.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/project.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/skill.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/feedback.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/message.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.2.0/uicons-brands/css/uicons-brands.css"
+    />
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- animated loading script  -->
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    {% include 'layouts/header.html' %} 
+    
+    {% if messages %} 
+    {% include 'messages/message.html' %} 
+    {% endif %}
+
+    <!-- Include the loader directly from the template -->
+    {% include 'layouts/loader.html' %}
+
+    <!-- Content -->
+    <main id="content" class="content">{% block main %} {% endblock %}</main>
+
+    <!-- Footer -->
+    {% include 'layouts/footer.html' %}
+  </body>
+</html>

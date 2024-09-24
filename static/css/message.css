@@ -1,0 +1,54 @@
+.message{
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    z-index: 91;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+/* Success message box */
+.message.success {
+    color: #0f7b11;
+    background-color: #d4eeca;
+    border-color: #0f7b11;
+}
+
+/* Info message box */
+.message.info {
+    color: #10648f;
+    background-color: #cbe2ef;
+    border-color: #10648f;
+}
+
+/* Error message box */
+.message.error {
+    color: #c52522;
+    background-color: #f1d2d2;
+    border-color: #c52522;
+}
+
+/* Warning message box */
+.message.warning {
+    color: #b47b19;
+    background-color: #ece6cc;
+    border-color: #b47b19;
+}
+
+/* Close button inside the message box */
+.message .closebtn {
+    margin-left: 15px;
+    color: inherit;
+    float: right;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.message .closebtn:hover {
+    color: #000;
+}

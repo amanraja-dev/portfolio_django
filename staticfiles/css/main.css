@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Play:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Play", sans-serif;
+}
+
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --blue-color: #0094cf;
+    --gray-color: gray;
+    --red-color: rgb(232, 0, 0);
+    --navy-color: blue;
+    --lightblue-color: #69c7ed;
+    --darkblue-color: #038abf;
+    --lightblack-color: #393939;
+}
+
+/* loader css  */
+
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.loader-inner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+/* CSS to prevent scrolling */
+.no-scroll {
+    overflow: hidden;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* header css */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    box-shadow: 0px 1px 2px var(--gray-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 50px;
+    z-index: 99;
+    height: 10vh;
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: "Lobster", sans-serif;
+    color: var(--black-color);
+    font-size: 35px;
+}
+
+
+.window ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.window ul li {
+    display: flex;
+    margin-right: 5px;
+}
+
+.window ul li:last-child {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.window ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--black-color);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+}
+
+.window ul li a:hover {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.window ul li:last-child a {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.window ul li:last-child img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.window a.active {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.window-nav-icon {
+    margin-right: 10px;
+}
+
+.window-menu {
+    position: fixed;
+    top: 10vh;
+    right: -100%;
+    width: 250px;
+    background-color: var(--white-color);
+    box-shadow: 1px 1px 5px var(--gray-color);
+    border-radius: 5px;
+    transition: right 1s ease;
+    overflow: hidden;
+}
+
+.window-menu.open {
+    right: 50px;
+}
+
+.window-menu ul {
+    list-style-type: none;
+    display: block;
+}
+
+.window-menu li {
+    border-bottom: 0.5px solid var(--gray-color);
+}
+
+.window-menu li:last-child {
+    border-bottom: 0px solid var(--gray-color);
+}
+
+.window-menu a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    color: var(--black-color);
+    padding-left: 20px;
+    transition: all 0.5s ease;
+}
+
+.window-menu a:hover {
+    color: var(--white-color);
+    background-color: var(--blue-color);
+}
+
+.window-menu a.active {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+
+.profile-menu {
+    display: none;
+}
+
+.profile-menu span {
+    font-size: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0.5px dotted var(--gray-color);
+}
+
+.profile-menu a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    border: 0.5px solid var(--blue-color)
+}
+
+/* mobile navigation css */
+body.drawer-open {
+    overflow: hidden;
+}
+
+.mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -110%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: left 1s ease;
+    z-index: 990;
+}
+
+.mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 85%;
+    height: 100%;
+    background-color: var(--white-color);
+    overflow-y: auto;
+}
+
+.mobile ul li {
+    border-bottom: 0.5px solid var(--gray-color);
+}
+
+.mobile-nav-icon {
+    margin-right: 20px;
+}
+
+.mobile a {
+    display: block;
+    text-decoration: none;
+    color: var(--black-color);
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    font-size: 1.4rem;
+}
+
+.mobile a.active {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+.mobile ul li:first-child {
+    height: 20vh;
+}
+
+.mobile ul li:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--white-color);
+    width: 15%;
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:0.5px var(--gray-color) solid;
+}
+
+.photo-name {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+.photo-name img {
+    width: 25vw;
+    height: 12vh;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.photo-name p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.profile-name-info {
+    display: flex;
+    margin: 0px 25px;
+    font-size: 15px;
+}
+
+main {
+    position: relative;
+    top: 10vh;
+    z-index: 90;
+}
+
+/* Home page or landing page css */
+
+.landing-page {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/static/img/w-home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.landing-info {
+    width: 40%;
+}
+
+.landing-info p:first-child {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.landing-info p {
+    font-size: 35px;
+}
+
+#profession {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0094cf;
+    margin: 10px 0px;
+}
+
+.resume-contact-div {
+    display: flex;
+    margin-top: 3vh;
+}
+
+.resume-contact-div a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px var(--gray-color);
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 16px;
+    background-image: linear-gradient(to top right, var(--lightblue-color) 0%, var(--darkblue-color)30%);
+    width: 150px;
+    height: 40px;
+    padding: 0px 20px;
+    transition: transform 0.5s ease;
+}
+
+.resume-contact-div a:first-child{
+    margin-right: 3vw;
+}
+
+.resume-contact-div a:hover {
+    transform: translateY(-6px);
+}
+
+.resume-contact-div a:last-child {
+    background-image: linear-gradient(to top right, 
+            var(--lightblack-color) 0%,
+            var(--black-color) 50%
+        );
+    color: var(--white-color);
+}
+
+.profile-icons {
+    margin-top: 3vh;
+    display: flex;
+}
+
+.fi-brands-github:hover {
+    color: var(--black-color);
+    transition: all 2s ease;
+}
+
+.fi-brands-linkedin:hover {
+    color: var(--navy-color);
+    transition: all 0.5s ease;
+}
+
+.fi-brands-instagram:hover {
+    color: var(--red-color);
+    transition: all 0.5s ease;
+}
+
+.fi-brands-facebook:hover {
+    color: var(--navy-color);
+    transition: all 0.5s ease;
+}
+
+.fi-brands-youtube:hover {
+    color: var(--red-color);
+    transition: all 0.5s ease;
+}
+
+.profile-icons a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black-color);
+    padding: 7px 7px 3px 7px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: transform 0.7s ease;
+}
+
+.profile-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.profile-icons a i {
+    font-size: 20px;
+}
+
+.landing-image {
+    width: 40%;
+    padding: 25px;
+}
+
+.landing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: changeBorderRadius 5s infinite ease-in-out;
+}
+
+@keyframes changeBorderRadius {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    20% {
+        border-radius: 65% 35% 48% 52% / 43% 60% 40% 57%;
+    }
+
+    40% {
+        border-radius: 60% 40% 50% 30%;
+    }
+
+    60% {
+        border-radius: 30% 60% 50% 40%;
+    }
+
+    80% {
+        border-radius: 50% 30% 40% 50%;
+    }
+
+    100% {
+        border-radius: 20% 50% 60% 40%;
+    }
+}
+
+/* style div css for design purposes */
+.style-1 {
+    width: 100%;
+    height: 8vh;
+    background-color: var(--blue-color);
+}
+
+/* login page css */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.login-form {
+    width: 50%;
+    background-color: var(--white-color);
+}
+
+.login-form form {
+    width: 100%;
+    padding: 5% 25px;
+}
+
+.login-form input {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    outline: none;
+
+}
+
+.error {
+    color: var(--red-color);
+    font-size: 13px;
+}
+
+.login-form button {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    background-color: var(--blue--color);
+    border: none;
+    border-radius: 5px;
+    color: var(--white-color);
+    font-size: 16px;
+    font-family: "Play", sans-serif;
+
+}
+
+.login-img {
+    width: 50%;
+}
+
+.login-img img {
+    object-fit: fill;
+}
+
+/* scroll to top css position */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.5s ease;
+}
+
+#scrollToTopBtn:active {
+    transform: scale(1.1);
+}
+
+#scrollToTopBtn.show {
+    display: block;
+}
+
+
+/* Media Quries  */
+@media screen and (width <=768px) {
+    .window ul li a {
+        font-size: 15px;
+        padding: 7.5px;
+    }
+
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo a {
+        font-size: 32px;
+    }
+
+    .window-nav-icon {
+        font-size: 22px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (width <=650px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    header {
+        padding: 5px 7%;
+    }
+
+    .logo a {
+        font-size: 30px;
+    }
+
+    .window {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .profile-menu {
+        display: flex;
+    }
+
+    .login-container {
+        height: 92vh;
+    }
+
+    .login-form {
+        width: 100%;
+        height: 92vh;
+        margin: 0 5%;
+    }
+
+    .login-img {
+        display: none;
+    }
+
+    .landing-page {
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0 7%;
+        background-image: url('/static/img/m-home.jpg');
+    }
+
+    .landing-info {
+        width: 100%;
+        /* height: 60%; */
+        margin-bottom: 5px;
+    }
+
+    .landing-image {
+        width: 100%;
+        padding: 0px;
+        height: 30%;
+    }
+
+    .landing-info p:first-child {
+        font-size: 2rem;
+    }
+
+    .landing-info p {
+        font-size: 25px;
+    }
+
+    #profession {
+        font-size: 29px;
+        margin-bottom: 20px;
+    }
+    .profile-icons{
+        margin-top: 1.5vh;
+    }
+
+    /* .resume-contact-div {
+        display: none;
+    } */
+
+    /* .profile-icons {
+        display: none;
+    } */
+
+}
+
+@media screen and (width<=280px) {
+    .landing-info {
+        margin-bottom: 30px;
+    }
+
+    .landing-info p:first-child {
+        font-size: 18px;
+    }
+
+    .landing-info p {
+        font-size: 20px;
+    }
+
+    #profession {
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .landing-page {
+        flex-direction: column;
+    }
+    .landing-info, .landing-image{
+        width: 80%;
+    }
+    .landing-info{
+        height: 40%;
+    }
+    .landing-image{
+        height: 40%;
+    }
+}
+

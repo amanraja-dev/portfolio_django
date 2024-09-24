@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+{% block main %}
+    <div class="login-container">
+        <div class="login-form">
+            <form action="{% url 'signin' %}" method="post">
+                <input type="text" placeholder="Email" name="email" required>
+                <span class="error">Error: </span>
+
+                <input type="text" placeholder="Password" name="password" required>
+                <span class="error">Error: </span>
+                
+
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
+        <div class="login-img">
+            <!-- {% load static %}
+            <img src="{% static 'img/login.jpg' %}" alt=""> -->
+        </div>
+    </div>
+{% endblock %}
+    

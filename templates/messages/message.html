@@ -1,0 +1,6 @@
+{% for message in messages %}
+<div class="message {{ message.tags }}">
+    <strong>Message:  </strong> {{ message }}
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+</div>
+{% endfor %}

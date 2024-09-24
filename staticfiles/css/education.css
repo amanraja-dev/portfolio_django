@@ -1,0 +1,296 @@
+/* commom css for education , project and skill page */
+.common-landing {
+    background-image: url('/static/img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.common-info {
+    width: 40%;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.common-info p:first-child {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.common-info p {
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+
+.common-info p:last-child {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.common-info b {
+    color: var(--blue-color);
+}
+
+.common-info a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    width: 130px;
+    height: 40px;
+    text-decoration: none;
+}
+
+.common-info span {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.common-img {
+    width: 40%;
+}
+
+.common-img img {
+    width: 100%;
+    mix-blend-mode: darken;
+}
+
+
+
+/* css of education banner */
+.education-banner {
+    width: 100%;
+    height: 60vh;
+}
+
+.education-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* css for education information */
+.education {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/static/img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    padding-top: 20px;
+}
+
+.education-content {
+    width: 50%;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(214, 214, 214);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+    margin-bottom: 50px;
+}
+
+.education-img {
+    width: 200px;
+    height: 200px;
+}
+
+.education-img img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: darken;
+}
+
+.education-info {
+    width: 40%;
+}
+
+.education-info p:first-child {
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 10px 0px;
+}
+
+.education-info p {
+    margin-bottom: 5px;
+}
+
+.education-info p:last-child {
+    margin-bottom: 0px;
+}
+
+
+
+/* about us css  */
+
+.about {
+    width: 100%;
+    padding: 50px 0px;
+}
+
+.family {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.family-title{
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.family-title span{
+    margin-right: 20px;
+    font-size: 50px;
+}
+
+.member {
+    width: 45%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(216, 216, 216);
+    display: flex;
+    align-items: center;
+}
+
+.member:last-child {
+    margin-bottom: 0px;
+}
+
+.member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+
+.member-info p:first-child {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.member-info p{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media screen and (width< 780px){
+    .family{
+        width: 90%;
+    }
+    .member{
+        width: 48%;
+    }
+}
+/* media queary for education css for mobiles devices */
+@media screen and (width <=650px) {
+    .common-landing {
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    .common-info {
+        margin-right: 0px;
+    }
+
+    .common-info,
+    .common-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .common-info p:first-child {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .common-info p {
+        font-size: 1.5rem;
+    }
+
+    .education {
+        padding-top: 30px;
+        background-image: url('/static/img/education-bg-m.jpg');
+    }
+
+    .education-content {
+        display: block;
+        width: 80%;
+        padding-top: 10px;
+    }
+
+    .education-img {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .education-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .education-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .education-banner {
+        height: 20vh;
+    }
+
+    .family {
+        width: 85%;
+        display: block;
+    }
+    .member{
+        width: 100%;
+    }
+    .member img {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+    }
+
+    .member-info p:first-child {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    .member-info p{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .family span{
+        margin-right: 20px;
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (width<=280px) {}

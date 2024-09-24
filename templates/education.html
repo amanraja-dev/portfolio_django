@@ -1,0 +1,84 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+Education
+{% endblock %}
+
+
+{% block main %}
+
+{% load static %}
+<section>
+    <div class="common-landing">
+        <div class="common-info">
+            <p>EDUCATION</p>
+            <p>I am a <b>computer science student</b> pursuing a Bachelor of Technology degree.</p>
+            <p><a href="">Education <span class="material-symbols-outlined">
+                        arrow_downward
+                    </span></a></p>
+        </div>
+        <div class="common-img">
+            {% load static %}
+            <img src="{% static 'img/education.jpg' %}" alt="">
+        </div>
+    </div>
+
+    <div class="style-1" id="education"></div>
+
+    <div class="education">
+
+        <div class="education-content">
+            <div class="education-img">
+                <img src="{% static 'img/school.jpg' %}" alt="">
+            </div>
+            <div class="education-info">
+                <p>10 TH</p>
+                <p>Hign school tilakpur, sultanganj </p>
+                <p>Percentage : 71.2%</p>
+                <p>Passing year : 2018</p>
+            </div>
+        </div>
+
+        <div class="education-content">
+            <div class="education-img">
+                <img src="{% static 'img/college.jpg' %}" alt="">
+            </div>
+            <div class="education-info">
+                <p>12 TH</p>
+                <p>A.K. gopalan college, sultanganj</p>
+                <p>Percentage : 75.6%</p>
+                <p>Passing year : 2020</p>
+            </div>
+        </div>
+
+        <div class="education-content">
+            <div class="education-img">
+                <img src="{% static 'img/university.jpg' %}" alt="">
+            </div>
+            <div class="education-info">
+                <p>B. Tech</p>
+                <p>Sagar institute of science & technology , GN</p>
+                <p>University : RGPV</p>
+                <P>Computer science engineering</P>
+                <p>Passing year : 2024</p>
+            </div>
+        </div>
+
+        <!-- <div class="education-content">
+            <img src="{% static 'img/college.jpg' %}" alt="">
+            <p>Hign school tilakpur, sultanganj </p>
+            <p>Percentage : 75.6%</p>
+            <p>Passing year : 2020</p>
+        </div>
+
+        <div class="education-content">
+            <img src="{% static 'img/university.jpg' %}" alt="">
+            <p>Sagar institute of science & technology , GN</p>
+            <p>University : RGPV</p>
+            <P>Computer science engineering</P>
+            <p>Passing year : 2024</p> 
+        </div> -->
+
+    </div>
+</section>
+{% endblock %}

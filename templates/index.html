@@ -1,0 +1,43 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+
+<!-- Landing page info and home images -->
+<div class="landing-page">
+    <div class="landing-info">
+        <p>Hello , Myself</p>
+        <p>{{ data.user.first_name }} {{ data.user.last_name }} </p>
+        <p id="profession"></p>
+        <small>{{ data.bio }}</small>
+        <div class="resume-contact-div">
+            <a href="{% url 'contact' %}">CONTACT<span class="material-symbols-outlined">call</span></a>
+            <a href="{% url 'download_resume' %}">RESUME<span class="material-symbols-outlined">download</span></a>
+        </div>
+        <div class="profile-icons">
+            <a href="{{github_link}}"><i class="fi fi-brands-github"></i></a>
+
+            <a href="{% if user.social %}
+                        {% for social in user.social.all %}
+                            {% if social.name == 'linkedin' %}
+                                {{ social.link }}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}"><i class="fi fi-brands-linkedin"></i></a>
+
+            <a href="#"><i class="fi fi-brands-instagram"></i></a>
+            <a href="#"><i class="fi fi-brands-facebook"></i></a>
+            <a href="#"><i class="fi fi-brands-youtube"></i></a>
+        </div>
+
+    </div>
+    <div class="landing-image">
+        {% load static %}
+        <img src="{% static 'img/amanpic.jpg' %}" alt="">
+    </div>
+</div>
+
+<!-- <div class="style-1"></div> -->
+
+{% endblock %}

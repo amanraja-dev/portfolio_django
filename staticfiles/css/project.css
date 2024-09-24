@@ -1,0 +1,45 @@
+.project{
+    background-image: url('/static/img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 92vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-info{
+    width: 40%;
+    margin-right: 25px;
+}
+
+.project-img{
+    width: 40%;
+}
+.project-img img{
+    width: 100%;
+    mix-blend-mode: darken;
+}
+
+@media screen and (width <= 780px ){
+
+}
+
+@media screen and (width <=650px){
+    .project{
+        display: block;
+        padding: 15% 5%;
+    }
+    .project-info{
+        margin-right: 0px;
+    }
+    .project-info,.project-img{
+        width: 100%;
+        height: 30vh;
+    }
+
+}
+
+@media screen and ( width<=280px){
+
+}

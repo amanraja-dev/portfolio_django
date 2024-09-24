@@ -1,0 +1,60 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+Activity
+{% endblock %}
+
+
+{% block main %}
+
+{% load static %}
+<section class="about">
+
+    <p class="family-title"><span class="material-symbols-outlined">
+        family_restroom
+    </span>Family member</p>
+    <div class="family">
+
+        <div class="member">
+            <img src="{% static 'img/profile.jpg' %}" alt="">
+            <div class="member-info">
+                <p>Nishat Alam</p>
+                <p>Father</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="{% static 'img/profile.jpg' %}" alt="">
+            <div class="member-info">
+                <p>Hina Parvin</p>
+                <p>Mother</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="{% static 'img/profile.jpg' %}" alt="">
+            <div class="member-info">
+                <p>Sahil Raja</p>
+                <p>Brother</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="{% static 'img/profile.jpg' %}" alt="">
+            <div class="member-info">
+                <p>Rehan Raja</p>
+                <p>Brother</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="{% static 'img/profile.jpg' %}" alt="">
+            <div class="member-info">
+                <p>Saniya Raja</p>
+                <p>Sister</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="current-address">
+    </div>
+    <div class="permanent-address"></div>
+</section>
+{% endblock %}

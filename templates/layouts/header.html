@@ -1,0 +1,130 @@
+<header>
+  <!-- Logo / name of website -->
+  <div class="logo">
+    <a href="{% url 'home' %}">{{ data.user.first_name }} {{ data.user.last_name }}</a>
+  </div>
+
+  <!-- navigation for laptop or window size screen  -->
+  <nav class="window">
+    <ul>
+      <li>
+        <a href="{% url 'home' %}" class="active"><span
+            class="material-symbols-outlined window-nav-icon">home</span>HOME</a>
+      </li>
+      <li>
+        <a href="{% url 'education' %}"><span
+            class="material-symbols-outlined window-nav-icon">school</span>EDUCATION</a>
+      </li>
+      <li>
+        <a href="{% url 'project' %}"><span
+            class="material-symbols-outlined window-nav-icon">sync_saved_locally</span>PROJECT</a>
+      </li>
+      <li>
+        <a href="{% url 'skill' %}"><span class="material-symbols-outlined window-nav-icon">monitoring</span>SKILL</a>
+      </li>
+      {% load static %}
+      <li>
+        <a href="#" id="menuToggle"><img src="{{data.profile_photo.url}}" alt="" /></a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="window-menu" id="windowMenu">
+    <ul>
+      {% if user.is_superuser %}
+      <li>
+        <a href="admin/"><span class="material-symbols-outlined mobile-nav-icon">dashboard</span>DASHBOARD</a>
+      </li>
+      {% endif %}
+      <li>
+        <a href="{% url 'activity' %}" class="active"><span
+            class="material-symbols-outlined mobile-nav-icon">directory_sync</span>ACTIVITY</a>
+      </li>
+      <li>
+        <a href="{% url 'contact' %}"><span class="material-symbols-outlined mobile-nav-icon">call</span>CONTACT</a>
+      </li>
+      <li>
+        <a href="{% url 'feedback' %}"><span class="material-symbols-outlined mobile-nav-icon">chat</span>FEEDBACK</a>
+      </li>
+      <li>
+        <a href="{% url 'resume' %}"><span
+            class="material-symbols-outlined mobile-nav-icon">description</span>RESUME</a>
+      </li>
+      {% if user.is_authenticated %}
+      <li>
+        <a href="{% url 'signout' %}"><span class="material-symbols-outlined mobile-nav-icon">login</span>LOGOUT</a>
+      </li>
+      {% else %}
+      <li>
+        <a href="{% url 'signin' %}"><span class="material-symbols-outlined mobile-nav-icon">login</span>LOGIN</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+
+  <!-- This is menu and download button.  -->
+  <div class="profile-menu">
+    <a href="{% url 'download_resume' %}"><span class="material-symbols-outlined">download</span></a>
+    <span onclick="openNav()" class="material-symbols-outlined">menu</span>
+  </div>
+</header>
+
+<!-- Navigation for mobile devices -->
+<nav class="mobile" id="mobileNav">
+  <ul>
+    <li>
+      <div class="photo-name">
+        <img src="{{data.profile_photo.url}}" alt="" class="drawer-image" />
+        <div class="profile-name-info">
+        <p class="profile_name">Aman Raja</p>
+          <p class="profile_designation">Full Stack Developer</p>
+        </div>
+      </div>
+
+    </li>
+
+    {% if user.is_superuser %}
+    <li>
+      <a href="admin/"><span class="material-symbols-outlined mobile-nav-icon">dashboard</span>DASHBOARD</a>
+    </li>
+    {% endif %}
+
+    <li>
+      <a href="{% url 'home' %}" class="active"><span
+          class="material-symbols-outlined mobile-nav-icon">home</span>HOME</a>
+    </li>
+    <li>
+      <a href="{% url 'education' %}"><span class="material-symbols-outlined mobile-nav-icon">school</span>EDUCATION</a>
+    </li>
+    <li>
+      <a href="{% url 'project' %}"><span
+          class="material-symbols-outlined mobile-nav-icon">sync_saved_locally</span>PROJECT</a>
+    </li>
+    <li>
+      <a href="{% url 'skill' %}"><span class="material-symbols-outlined mobile-nav-icon">monitoring</span>SKILL</a>
+    </li>
+    <li>
+      <a href="{% url 'activity' %}"><span
+          class="material-symbols-outlined mobile-nav-icon">directory_sync</span>ACTIVITY</a>
+    </li>
+    <li>
+      <a href="{% url 'contact' %}"><span class="material-symbols-outlined mobile-nav-icon">call</span>CONTACT</a>
+    </li>
+    <li>
+      <a href="{% url 'feedback' %}"><span class="material-symbols-outlined mobile-nav-icon">chat</span>FEEDBACK</a>
+    </li>
+    {% if user.is_authenticated %}
+    <li>
+      <a href="{% url 'signout' %}"><span class="material-symbols-outlined mobile-nav-icon">login</span>LOGOUT</a>
+    </li>
+    {% else %}
+    <li>
+      <a href="{% url 'signin' %}"><span class="material-symbols-outlined mobile-nav-icon">login</span>LOGIN</a>
+    </li>
+    {% endif %}
+
+    <li>
+      <span class="material-symbols-outlined" onclick="closeNav()">close</span>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Project
+{% endblock %}
+
+
+{% block main %}
+<section>
+    <div class="common-landing">
+        <div class="common-info">
+            <p>PROJECT</p>
+            <p>Full-stack projects using <b>Django</b> and <b>Laravel</b> frameworks are available below.</p>
+            <p><a href="">Projects<span class="material-symbols-outlined">
+                arrow_downward
+                </span></a></p>
+        </div>
+        <div class="common-img">
+            {% load static %}
+            <img src="{% static 'img/project.jpg' %}" alt="">
+        </div>
+    </div>
+
+    <!-- <div class="style-1"></div> -->
+</section>           
+{% endblock %}
+    

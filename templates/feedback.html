@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}
+    Feedback
+{% endblock %}
+
+
+{% block main %}
+    <section class="feedback">
+        <div class="feedback-form">
+            <form action="" method="post" class="form">
+                {% csrf_token %}
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Mobile">
+                <textarea name="" id="" cols="30" rows="5"></textarea>
+                <button>SEND</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+    
