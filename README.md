@@ -1,4 +1,5 @@
-Django Portfolio Website
+Django Portfolio Website 
+
 This is a personal portfolio website built with Django as the backend server and HTML, CSS, and JavaScript for the frontend design. The unique feature of this portfolio is that it supports dynamic data management through Django's built-in admin panel. This allows you to easily update your profile information, portfolio projects, education details, social links, and other content directly from the database, without modifying the code.
 
 Features
@@ -47,8 +48,7 @@ Copy code
 python manage.py runserver
 Access the website and admin panel:
 
-Portfolio Website: Visit http://localhost:8000
-Admin Panel: Visit http://localhost:8000/admin to log in with your superuser credentials and manage your content.
+Portfolio Website: Visit https://amanraja.pythonanywhere.com
 Project Structure
 core: Contains the main Django settings and configuration files.
 portfolio: Django app with views, models, and templates for the portfolio website.
